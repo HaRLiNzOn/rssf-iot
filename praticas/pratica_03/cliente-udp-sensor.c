@@ -55,6 +55,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
   while(status != RESOLV_STATUS_CACHED)
   {
       status = set_connection_address(&ipaddr, UDP_CONNECTION_ADDR);
+<<<<<<< HEAD
 
       if(status == RESOLV_STATUS_RESOLVING)
       {
@@ -66,6 +67,10 @@ PROCESS_THREAD(udp_client_process, ev, data)
           PROCESS_WAIT_EVENT();
       }
   }*/
+=======
+      PROCESS_WAIT_EVENT();
+  }
+>>>>>>> 2c8e60f9f55a1f6e6bef04203c7cd9e3187d4ced
   // Se não utilizar mDNS, use a linha abaixo para registrar IPv6 destino
   // uip_ip6addr(&ipaddr, 0xfe80, 0, 0, 0, 0x215, 0x2000, 0x0002, 0x2145);
   uip_ip6addr(&ipaddr, 0xfd00, 0, 0, 0, 0x212, 0x4b00, 0x1376, 0x4e03);
