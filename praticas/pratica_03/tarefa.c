@@ -5,7 +5,7 @@
 #include "utils.h"
 #include "sensor-timer.h"
 
-#define SEND_INTERVAL		(5 * CLOCK_SECOND)
+#define SEND_INTERVAL       (5 * CLOCK_SECOND)
 
 static struct etimer et;
 static struct uip_udp_conn *client_conn;
